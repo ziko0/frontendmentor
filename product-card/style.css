@@ -1,0 +1,169 @@
+:root{
+    --clr-primary-400: hsl(158, 36%, 37%);
+    --clr-secondery-200: hsl(30, 38%, 92%);
+    --clr-primary-darker: hsl(158, 36%, 20%);
+
+
+    --clr-neutral-900: hsl(212, 21%, 14%);
+    --clr-neutral-400: hsl(228, 12%, 48%);
+    --clr-neutral-100: hsl(0, 0%, 100%);
+
+    --font-accent: 'Fraunces', serif;
+    --font-base:   'Montserrat', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+
+/* === css reset === */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+h1{
+    line-height: 1;
+}
+
+  /* main styling */
+
+  body{
+    font-family: var(--font-base);
+    font-size: 0.875rem;
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-400);
+    background-color: var(--clr-secondery-200);
+
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+
+/* utilities */
+
+.d-flex{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+/* product card */
+
+.product{
+    --padding: 1.5rem;
+    --spaceing: 1rem;
+
+    max-width: 600px;
+    display: grid;
+    background-color: var(--clr-neutral-100);
+    border-radius: 0.875rem;
+    overflow: hidden;
+}
+
+@media (min-width: 600px){
+  .product{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-content{
+    display: grid;
+    gap: var(--spaceing);
+    padding: var(--padding)
+}
+
+.category{
+    font-size: .825rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.title{
+    font-size: 2rem;
+    font-family: var(--font-accent);
+    color: var(--clr-neutral-900);
+}
+
+.price{
+    font-size: 2rem;
+    font-family: var(--font-accent);
+    color: var(--clr-primary-400);
+}
+
+.original-price{
+    text-decoration: line-through;
+}
+
+.btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: .75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+    font-size: .925rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:is(:hover, :focus){
+    background-color: var(--clr-primary-darker);
+}
+
+.btn[data-icon="shopping-cart"]::before{
+    content: "";
+    background-image: url(./images/icon-cart.svg);
+    width: 15px;
+    height: 16px;
+}

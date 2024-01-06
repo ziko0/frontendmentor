@@ -1,0 +1,143 @@
+:root{
+    --clr-card-bg: #15263F;
+    --clr-title: #FFFFFF;
+    --clr-paragrap: #8BACD9;
+    --clr-cyan: #00FFF8;
+
+    --fs-22: 1.375rem;
+    --fs-18: 1.125rem;
+    --fs-16: 1rem;
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-600: 600;
+
+    --font: 'Outfit', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: var(--font);
+    padding: 0 15px;
+    background-color: #0D192C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* main container */
+
+.container{
+    width: 350px;
+    height: 596px;
+    padding: 24px;
+    background: #15263F;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+    border-radius: 15px;
+}
+
+.card-container{
+    width: 302px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+   
+}
+
+
+.main-img{
+    width: 302px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.title{
+    font-size: var(--fs-22);
+    font-weight: var(--fw-600);
+    color: var(--clr-title);
+}
+
+p{
+    color: var(--clr-paragrap);
+    font-weight: var(--fw-300);
+    font-size: var(--fs-18);
+    line-height: 26px;
+}
+
+.coin{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span{
+    display: flex;
+    align-items: center;
+    gap: 6.50px;
+}
+
+.eth{
+    color: var(--clr-cyan);
+    font-weight: var(--fw-600) ;
+    font-size: var(--fs-16);
+    text-transform: uppercase;
+}
+
+.coin .clock{
+    width: 13px;
+    height: 13px;
+    object-fit: contain;
+}
+
+.days{
+    color: var(--clr-paragrap);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-16);
+}
+
+.creation{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.creation img{
+    width: 33px;
+    height: 33px;
+    border: 1px solid var(--clr-title);
+    border-radius: 50%;
+    margin-right: 1rem;
+  
+}
+
+.creation{
+    font-size: var(--fs-16);
+    font-weight: var(--fw-400);
+    color: var(--clr-paragrap)
+}
+
+.white{
+    color: var(--clr-title);
+}
+
+/* line */
+
+.line::before{
+    content:" ";
+  height: 1px;
+  width: 100%;
+  background:var(--clr-paragrap);
+  display: block;
+ 
+}

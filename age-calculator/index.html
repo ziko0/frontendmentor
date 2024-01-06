@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age - Calculator</title>
+    <!-- own css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- google fonts -->
+
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="header d-flex">
+                <label for="day" class="d-flex">
+                    day
+                    <input type="text" placeholder="dd" id="day">
+                </label>
+                <label for="month" class="d-flex">
+                    month
+                    <input type="text" placeholder="mm" id="month">
+                </label>
+                <label for="year" class="d-flex">
+                    year
+                    <input type="text" placeholder="yyyy" id="year">
+                </label>
+            </div>
+            <div class="line">
+                <hr>
+                <button type="submit" onclick="age()" class="btn" id="action-btn">
+                    <img src="./images/Frame 30.png" alt="btn">
+                </button>
+            </div>
+            <div class="result">
+                <p class="y"><span class="numbers" id="c-year" >--</span> years</p>
+                <p class="m"><span class="numbers" id="c-month" >--</span> months</p>
+                <p class="d"><span class="numbers" id="c-day" >--</span> days</p>
+            </div>
+        </div>
+    </main>
+<script src="./app.js"></script>
+</body>
+</html>

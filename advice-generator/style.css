@@ -1,0 +1,120 @@
+:root{
+    --light-cyan: hsla(193, 38%, 86%, 1);
+    --neon-green: hsla(150, 100%, 66%, 1);
+    --grayish-blue: hsla(216, 19%, 38%, 1);
+    --dark-grayish-blue: hsla(219, 19%, 24%, 1);
+    --dark-blue: hsla(218, 23%, 16%, 1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-blue);
+}
+
+.container{
+    position: relative;
+    width: 540px;
+    height: 332px;
+    padding: 39px 20px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--dark-grayish-blue);
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.advice-box{
+    width: 444px;
+    height: 213px;
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+
+span{
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--neon-green);
+}
+
+p{
+    margin-top: 24px;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: -0.01em;
+    color: var(--light-cyan);
+}
+
+
+button{
+    position: absolute;
+    bottom: -1.7rem;
+    width: 64px;
+    height: 64px;
+    background-color: var(--neon-green);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button:hover{
+    filter: drop-shadow(0px 0px 10px #52FFA8) drop-shadow(0px 0px 5px #52FFA8) drop-shadow(0px 0px 30px #52FFA8);
+}
+
+
+/* lines */
+
+hr{
+    width:80% ;
+    color: var(--grayish-blue);
+}
+
+
+
+.line{
+    position: absolute;
+    bottom: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 55px;
+}
+
+.line span{
+    display: block;
+    width: 6px;
+    height: 16px;
+    border: none;
+    border-radius: 12px;
+    color: var(--light-cyan);
+}
+
+@media (max-width: 568px){
+    .container{
+        width: 342px;
+        height: 315px;
+    }
+}
